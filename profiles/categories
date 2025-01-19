@@ -1,4 +1,9 @@
 app-accessibility
 dev-libs
 dev-util
+media-libs
+media-sound
+x11-base
+x11-libs
 x11-misc
+x11-proto
