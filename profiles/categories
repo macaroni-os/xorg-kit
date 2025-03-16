@@ -1,8 +1,11 @@
 app-accessibility
 dev-libs
 dev-util
+media-fonts
+media-gfx
 media-libs
 media-sound
+virtual
 x11-base
 x11-libs
 x11-misc
