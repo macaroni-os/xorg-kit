@@ -7,7 +7,7 @@ XORG_MULTILIB=no
 XORG_TARBALL_SUFFIX=xz
 inherit toolchain-funcs xorg-3
 
-SRC_URI="https://www.x.org/releases/individual/lib/libX11-1.8.7.tar.xz -> libX11-1.8.7.tar.xz"
+SRC_URI="https://www.x.org/releases/individual/lib/${P}.tar.xz"
 
 # Note: please bump this with x11-misc/compose-tables
 DESCRIPTION="X.Org X11 library"
