@@ -14,7 +14,9 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXaw
 	x11-libs/libXt
 	x11-misc/xbitmaps"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-misc/util-macros
+"
 
 src_unpack() {
 	xorg-3_src_unpack
