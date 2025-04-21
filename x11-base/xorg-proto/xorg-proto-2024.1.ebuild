@@ -45,7 +45,6 @@ RDEPEND="
     =x11-proto/xf86bigfontproto-1.2.0*:0/stub
     =x11-proto/xf86dgaproto-2.1*:0/stub
     =x11-proto/xf86driproto-2.1.1*:0/stub
-    =x11-proto/xf86miscproto-0.9.3*:0/stub
     =x11-proto/xf86rushproto-1.1.2*:0/stub
     =x11-proto/xf86vidmodeproto-2.3.1*:0/stub
     =x11-proto/xineramaproto-1.2.1*:0/stub
