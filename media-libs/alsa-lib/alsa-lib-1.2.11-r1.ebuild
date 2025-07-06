@@ -24,7 +24,7 @@ RDEPEND="python? ( ${PYTHON_DEPS} )
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${REPODIR}/media-sound/files/${PN}/${PN}-1.1.6-missing_files.patch" #652422
+	"${FILESDIR}/${PN}-1.1.6-missing_files.patch" #652422
 )
 
 pkg_setup() {
