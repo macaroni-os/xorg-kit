@@ -2,6 +2,7 @@
 # Autogen by MARK Devkit
 
 EAPI=7
+inherit meson
 
 DESCRIPTION="Compatibility X server to run under Wayland"
 HOMEPAGE="https://wayland.freedesktop.org/xserver.html"
@@ -9,7 +10,7 @@ SRC_URI="https://www.x.org/releases/individual/xserver/xwayland-24.1.9.tar.xz ->
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="*"
-IUSE="rpc selinux unwind video_cards_nvidia xcsecurity"
+IUSE="rpc selinux unwind video_cards_nvidia xcsecurity libdecor"
 # Commons depends
 CDEPEND="dev-libs/libbsd
 	dev-libs/openssl
@@ -35,6 +36,7 @@ CDEPEND="dev-libs/libbsd
 	  sys-process/audit
 	  sys-libs/libselinux
 	)
+	libdecor? ( gui-libs/libdecor )
 	unwind? ( sys-libs/libunwind )
 	video_cards_nvidia? ( gui-libs/egl-wayland )
 	
@@ -53,7 +55,7 @@ src_configure() {
 	  $(meson_use selinux xselinux)
 	  $(meson_use unwind libunwind)
 	  $(meson_use xcsecurity)
-	  $(meson_use video_cards_nvidia xwayland_eglstream)
+	  $(meson_use libdecor)
 	  -Ddpms=true
 	  -Ddri3=true
 	  -Ddtrace=false
