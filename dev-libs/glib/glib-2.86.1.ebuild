@@ -16,7 +16,7 @@ BDEPEND="${PYTHON_DEPS}
 	
 "
 RDEPEND="dev-libs/libpcre[static-libs?]
-	virtual/libicon
+	virtual/libiconv
 	virtual/libffi:=
 	virtual/libintl
 	sys-libs/zlib
