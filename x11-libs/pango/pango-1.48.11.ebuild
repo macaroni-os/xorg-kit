@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 	X? ( x11-base/xorg-proto )
 "
 BDEPEND="
-	dev-util/glib-utils
 	sys-apps/help2man
 	virtual/pkgconfig
 "

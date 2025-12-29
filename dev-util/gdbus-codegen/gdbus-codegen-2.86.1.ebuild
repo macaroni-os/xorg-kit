@@ -37,7 +37,6 @@ src_prepare() {
 	distutils-r1_src_prepare
 }
 do_xsltproc_command() {
-	# Taken from meson.build for manual manpage building - keep in sync (also copied to dev-util/glib-utils)
 	xsltproc \
 	  --nonet \
 	  --stringparam man.output.quietly 1 \

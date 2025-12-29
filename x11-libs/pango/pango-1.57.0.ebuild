@@ -12,7 +12,7 @@ LICENSE="LGPL-2+"
 SLOT="0"
 KEYWORDS="*"
 IUSE="debug doc +introspection sysprof X"
-BDEPEND="dev-util/glib-utils
+BDEPEND="
 	sys-apps/help2man
 	virtual/pkgconfig
 	
