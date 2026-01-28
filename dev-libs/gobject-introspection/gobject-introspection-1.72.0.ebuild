@@ -58,6 +58,10 @@ src_prepare() {
 }
 
 src_configure() {
+	# Force using old distutils from Python instead
+	# of the version updated from setuptools
+	export SETUPTOOLS_USE_DISTUTILS=stdlib
+
 	local mesonargs=(
 		$(meson_use cairo) \
 		$(meson_use doc gtk_doc) \
