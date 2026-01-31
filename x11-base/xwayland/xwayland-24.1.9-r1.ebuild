@@ -10,7 +10,7 @@ SRC_URI="https://www.x.org/releases/individual/xserver/xwayland-24.1.9.tar.xz ->
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="*"
-IUSE="rpc selinux unwind video_cards_nvidia xcsecurity libdecor"
+IUSE="rpc libei unwind video_cards_nvidia xcsecurity libdecor"
 # Commons depends
 CDEPEND="dev-libs/libbsd
 	dev-libs/openssl
@@ -32,17 +32,13 @@ CDEPEND="dev-libs/libbsd
 	x11-libs/pixman
 	x11-libs/xtrans
 	x11-misc/xkeyboard-config
-	selinux? (
-	  sys-process/audit
-	  sys-libs/libselinux
-	)
+	libei? ( dev-libs/libei )
 	libdecor? ( gui-libs/libdecor )
 	unwind? ( sys-libs/libunwind )
 	video_cards_nvidia? ( gui-libs/egl-wayland )
 	
 "
 RDEPEND="${CDEPEND}
-	selinux? ( sec-policy/selinux-xserver )
 	!<=x11-base/xorg-server-1.20.11
 	
 "
@@ -52,10 +48,10 @@ DEPEND="${CDEPEND}
 src_configure() {
 	local emesonargs=(
 	  $(meson_use rpc secure-rpc)
-	  $(meson_use selinux xselinux)
 	  $(meson_use unwind libunwind)
 	  $(meson_use xcsecurity)
 	  $(meson_use libdecor)
+	  -Dxselinux=false
 	  -Ddpms=true
 	  -Ddri3=true
 	  -Ddtrace=false
@@ -69,7 +65,9 @@ src_configure() {
 	  -Dxinerama=true
 	  -Dxvfb=true
 	  -Dxv=true
+	  -Ddrm=true
 	  -Dxwayland-path="${EPREFIX}"/usr/bin
+	  -Dxwayland_ei=$(usex libei portal false)
 	)
 	meson_src_configure
 }
