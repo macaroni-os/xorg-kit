@@ -13,7 +13,6 @@ PATCHES=(
 	"${FILESDIR}/imake-1.0.8-cpp-args.patch"
 	"${FILESDIR}/imake-1.0.9-no-get-gcc.patch"
 	"${FILESDIR}/imake-1.0.8-respect-LD.patch"
-	"${FILESDIR}/imake-1.0.8-xmkmf-pass-cc-ld.patch"
 )
 BDEPEND="virtual/pkgconfig
 	
