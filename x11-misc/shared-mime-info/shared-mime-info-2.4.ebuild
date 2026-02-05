@@ -16,6 +16,7 @@ RDEPEND="
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
 	app-text/xmlto
+	app-text/docbook-xml-dtd:4.1.2
 	dev-util/intltool
 	sys-devel/gettext
 	virtual/pkgconfig
