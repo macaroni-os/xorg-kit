@@ -13,7 +13,7 @@ KEYWORDS="*"
 BDEPEND="virtual/pkgconfig
 	
 "
-RDEPEND="
+RDEPEND="x11-libs/libxcb
 	
 "
 DEPEND="${RDEPEND}
