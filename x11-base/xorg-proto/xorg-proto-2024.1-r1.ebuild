@@ -11,7 +11,7 @@ SRC_URI="https://www.x.org/releases/individual/proto/xorgproto-2024.1.tar.xz -> 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="*"
-S=""${WORKSPACE}"/xorgproto"
+S="${WORKDIR}/xorgproto-2024.1"
 src_configure() {
 	local emesonargs=(
 	  --datadir=/usr/share
