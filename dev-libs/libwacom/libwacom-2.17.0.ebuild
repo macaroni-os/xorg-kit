@@ -15,7 +15,7 @@ IUSE="doc"
 BDEPEND="${PYTHON_DEPS}
 	virtual/pkgconfig
 	doc? (
-	  app-text/doxygen
+	  app-doc/doxygen
 	)
 	
 "
