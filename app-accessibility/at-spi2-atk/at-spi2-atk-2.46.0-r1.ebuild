@@ -7,7 +7,7 @@ DESCRIPTION="Gtk module for bridging AT-SPI to Atk Metadata"
 HOMEPAGE="https://wiki.gnome.org/Accessibility"
 SLOT="2"
 KEYWORDS="*"
-RDEPEND=">=app-accessibility/at-spi2-core-2.46.0
+PDEPEND=">=app-accessibility/at-spi2-core-2.46.0
 	
 "
 
