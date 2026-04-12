@@ -16,7 +16,6 @@ BDEPEND="virtual/pkgconfig
 "
 RDEPEND="x11-libs/libxcb
 	x11-misc/compose-tables
-	!x11-libs/libxcb:0/1.12
 	
 "
 DEPEND="${RDEPEND}
