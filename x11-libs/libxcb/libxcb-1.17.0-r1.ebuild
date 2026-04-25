@@ -51,7 +51,8 @@ src_configure() {
 	  --enable-shared
 	  ${no_static}
 	  $(use_enable xkb)
---enable-xinput
+	  --enable-xinput
+	  --disable-devel-docs
 	 )
 	econf "${econfargs[@]}"
 }
