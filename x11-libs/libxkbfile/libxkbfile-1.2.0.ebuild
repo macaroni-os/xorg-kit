@@ -2,7 +2,7 @@
 # Autogen by MARK Devkit
 
 EAPI=7
-inherit autotools flag-o-matic
+inherit meson
 
 DESCRIPTION="X.Org xkbfile library"
 HOMEPAGE="https://gitlab.freedesktop.org/xorg/lib/libxkbfile"
@@ -27,28 +27,12 @@ DEPEND="${RDEPEND}
 	
 	
 "
-
-src_prepare() {
-	eautoreconf || die
-	default
-}
 src_configure() {
-	local no_static=""
-	# Check if package supports disabling of static libraries
-	if grep -q -s "able-static" ${ECONF_SOURCE:-.}/configure; then
-	  no_static="--disable-static"
-	fi
-	local econfargs=(
-	  --enable-shared
-	  ${no_static}
+	local emesonargs=(
+	  -Ddefault_library=shared
 	  
 	)
-	econf "${econfargs[@]}"
-}
-src_install() {
-	default
-	find "${D}" -type f -name '*.la' -delete || die
-	
+	meson_src_configure
 }
 
 
