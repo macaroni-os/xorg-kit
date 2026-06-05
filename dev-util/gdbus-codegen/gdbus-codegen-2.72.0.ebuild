@@ -42,7 +42,7 @@ python_prepare_all() {
 }
 
 do_xsltproc_command() {
-	# Taken from meson.build for manual manpage building - keep in sync (also copied to dev-util/glib-utils)
+	# Taken from meson.build for manual manpage building - keep in sync (also copied to dev-libs/glib:2)
 	xsltproc \
 		--nonet \
 		--stringparam man.output.quietly 1 \

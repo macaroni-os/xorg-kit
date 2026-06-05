@@ -33,7 +33,7 @@ BDEPEND="
 	${PYTHON_DEPS}
 	virtual/pkgconfig
 	doc? ( dev-util/gtk-doc )
-	introspection? ( dev-util/glib-utils )
+	introspection? ( dev-libs/glib:2 )
 "
 
 post_src_unpack() {
