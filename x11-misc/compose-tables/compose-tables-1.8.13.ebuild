@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	x11-misc/util-macros
 	media-fonts/font-util
 	x11-base/xorg-proto
-	
+	x11-libs/xtrans
 	
 "
 S="${WORKDIR}/libX11-1.8.13"
