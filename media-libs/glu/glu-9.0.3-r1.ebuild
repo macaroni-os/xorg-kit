@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 "
 src_configure() {
 	local emesonargs=(
-	  -Dgl_provider=$(usex glvnd libglvnd gl)
+	  -Dgl_provider=$(usex libglvnd glvnd gl)
 	)
 	meson_src_configure
 }
