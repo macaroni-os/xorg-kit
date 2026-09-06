@@ -116,7 +116,7 @@ src_configure() {
 src_install() {
 	meson_src_install
 	 newinitd "${FILESDIR}"/xdm-setup.initd-1 xdm-setup
-	newinitd "${FILESDIR}"/xdm.initd-14 xdm
+	newinitd "${FILESDIR}"/xdm.initd-15 xdm
 	newconfd "${FILESDIR}"/xdm.confd-4 xdm
 	 # The meson build system does not support install-setuid
 	if ! use elogind; then
