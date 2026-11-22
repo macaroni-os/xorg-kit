@@ -15,7 +15,7 @@ BDEPEND="${PYTHON_DEPS}
 	virtual/pkgconfig
 	
 "
-RDEPEND="dev-libs/libpcre[static-libs?]
+RDEPEND="dev-libs/libpcre2[static-libs?]
 	virtual/libiconv
 	virtual/libffi:=
 	virtual/libintl
@@ -69,8 +69,6 @@ src_configure() {
 	  fi
 	  export LIBFFI_CFLAGS="-I$(echo /usr/$(get_libdir)/libffi-*/include)"
 	  export LIBFFI_LIBS="-lffi"
-	  export PCRE_CFLAGS=" " # test -n "$PCRE_CFLAGS" needs to pass
-	  export PCRE_LIBS="-lpcre"
 	fi
 	local emesonargs=(
 	  -Dc_args="${CFLAGS}"
